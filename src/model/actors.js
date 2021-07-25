@@ -1,14 +1,14 @@
-class Actor{
-    constructor (fname, lname, bDay, picLink, imdbLink){
-        this.fname=fname;
-        this.lname=lname;
-        this.bDay=bDay;
-        this.picLink=picLink;
-        this.imdbLink=imdbLink;
-    }
+// class Actor{
+//     constructor (fname, lname, bDay, picLink, imdbLink){
+//         this.fname=fname;
+//         this.lname=lname;
+//         this.bDay=bDay;
+//         this.picLink=picLink;
+//         this.imdbLink=imdbLink;
+//     }
 
-    
-}
+
+// }
 
 
 const actors = [{
@@ -40,4 +40,6 @@ const actors = [{
     imdbLink: "https://www.imdb.com/name/nm0001455/", 
 },
 ]
+
+export default actors
 

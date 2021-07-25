@@ -1,3 +1,4 @@
 function CardComp({actor}){
     
+
 }
