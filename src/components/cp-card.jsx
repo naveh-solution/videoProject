@@ -1,0 +1,3 @@
+function CardComp({actor}){
+    
+}
