@@ -10,14 +10,13 @@ function ActorsPages() {
             <Card>
             <Card.Img variant="top" src={actor.Img} />
             <Card.Body>
-              <Card.Title>{actor.fname + actor.lname}</Card.Title>
+              <Card.Title><a href={actor.imdbLink}>{actor.fname + actor.lname}</a></Card.Title>
               <Card.Text>
-                {}
+                <span>{actor.bDay}</span>
               </Card.Text>
-              <Button variant="primary">Go somewhere</Button>
             </Card.Body>
           </Card>
-        })
+        }
 
         }
     }
