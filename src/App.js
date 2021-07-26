@@ -1,9 +1,10 @@
 import './App.css';
+import ActorsPages from './pages/mainVidoePage/actorpages';
 
 function App() {
   return (
    <div>
-     <h1>Hello react app</h1>
+     <ActorsPages/>
    </div>
   );
 }
