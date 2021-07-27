@@ -1,6 +1,7 @@
 import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import CardComp from "../../components/cpCard";
+import FilterComp from "../../components/cpFilter";
 import SerchComp from "../../components/cpSerch";
 import Actor from "../../model/actors";
 
@@ -13,7 +14,10 @@ function ActorsPages() {
     
     return (
         <div>
+            <header>
             <SerchComp actorsL={actors} onSerch={setActors} />
+            <FilterComp/>
+            </header>
             <Container>
                 <Row>
                     {actors.length > 0 ? actors.map((actor) =>
