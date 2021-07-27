@@ -6,7 +6,6 @@ function CardComp({ actor }) {
 
 
 return (
-
     <Card>
         <Card.Img variant="top" src={actor.picLink} alt="sory"/>
         <Card.Body>
