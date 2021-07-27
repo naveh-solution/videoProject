@@ -6,7 +6,7 @@ function CardComp({ actor }) {
 
 
 return (
-    <Card>
+    <Card >
         <Card.Img variant="top" src={actor.picLink} alt="sory"/>
         <Card.Body>
             <Card.Title className="cardTitle"><a href={actor.imdbLink} rel="noreferrer" target="_blank">{actor.fname + " " + actor.lname}</a></Card.Title>

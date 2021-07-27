@@ -4,6 +4,7 @@ import CardComp from "../../components/cpCard";
 import FilterComp from "../../components/cpFilter";
 import SerchComp from "../../components/cpSerch";
 import Actor from "../../model/actors";
+import "./actorspage.css"
 
 function ActorsPages() {
 
@@ -14,9 +15,9 @@ function ActorsPages() {
     
     return (
         <div>
-            <header>
+            <header className="header">
             <SerchComp actorsL={actors} onSerch={setActors} />
-            <FilterComp/>
+            <FilterComp actorsL={actors} onFilter={setActors}/>
             </header>
             <Container>
                 <Row>
