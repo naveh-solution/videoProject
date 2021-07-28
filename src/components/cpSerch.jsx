@@ -1,20 +1,21 @@
 import React from "react"
 
 
-function SerchComp({ actorsL, onSerch }) {
-    const [serch, setSerch] = React.useState("")
-    function serchactor() {
-        const filterdActors = actorsL.filter((actor) =>
-            actor.fname.toLowerCase().startsWith({ serch }) || actor.lname.toLowerCase().startsWith({ serch }))
-        filterdActors.lenght === 0 ?
-            <div>
-                <h1>No Result Found</h1>
-            </div>
-            : onSerch({ filterdActors })
-    }
+function SerchComp({ serchValue, setSerchValue, onSerchCange }) {
+    
+    // function serchactor(serchValue) {
+    //     console.log(serchValue)
+    //     const foundActors = actorsL.filter((actor) =>
+    //         actor.fname.toLowerCase().startsWith({serchValue}) || actor.lname.toLowerCase().startsWith({serchValue}))
+    //     foundActors.lenght === 0 ?
+    //         <div>
+    //             <h1>No Result Found</h1>
+    //         </div>
+    //         : onSerch({ foundActors })
+    // }
     return (
         <header>
-            <input type="text" value={serch} id="serchText" onChange={(e) => serchactor(setSerch(e.target.value))} placeholder="Type to Serch" />
+            <input type="text" value={serchValue} onChange={(e) => setSerchValue(e.target.value)} onSerchCange={onSerchCange(serchValue)} placeholder="Type to Serch" />
         </header>
     )
 }

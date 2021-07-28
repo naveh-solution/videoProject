@@ -1,18 +1,18 @@
 import React from "react";
 
-function FilterComp({actorsL, onFilter}){
-    const [fOrL, setFOrL] = React.useState("")
+function FilterComp({actorsL, onFilter, selected, setSelected}){
+   
 
-    // function sortActors(forl){
+    function sortActors(){
 
-    //     actorsL.sort((act1, act2) => act1.forl - act2.forl)
-
-    //     return onFilter({actorsL})
-    // }
-    // ({fOrL}) => onFilter(actorsL.sort((act1, act2) => act1.fOrL - act2.fOrl))
+const actorsBy = actorsL.sort((act1, act2) => act1.fOrL - act2.fOrL)
+        console.log({actorsBy})
+        return onFilter({actorsBy})
+    }
+    
     return(
         <div>
-        <select value={fOrL} name="fOrL" id="fLName" onChange={(e) => setFOrL(e.target.value)}>
+        <select value={selected} name="fOrL" id="fLName" onChange={(e) => sortActors(setSelected(e.target.value))}>
             <option value="fname">First Name</option>
             <option value="lname">Last Name</option>
         </select>
