@@ -1,0 +1,39 @@
+.movieDiv{
+    margin: 20px auto;
+    background-color: rgba(210,32,123,0.2);
+    justify-content: center;
+}
+
+.actors{
+    list-style: none;
+    margin: auto;
+    color: blueviolet;
+    align-content: flex-start;
+}
+
+.directorTime {
+    margin: auto;
+    /* align-content: space-around; */
+}
+
+.actorsL {
+    margin: auto;
+    /* align-content: flex-end; */
+    
+}
+
+.directorTime > p {
+    color: rgb(206, 79, 62);
+    margin: 10px auto;
+    display: flex;
+    font-size: 22px;
+    justify-content: flex-start;
+}
+
+.movieD > p > h3{
+    margin: auto 10px;
+}
+
+/* .movieImg{
+    align-content: space-around;
+} */
