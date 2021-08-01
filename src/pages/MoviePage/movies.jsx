@@ -11,56 +11,34 @@ function Movies() {
     return (
         <div>
             <div className="container">
-                <div className="row movieDiv">
-                    <div className="col col-md-4 movieImg">
-                        <img src={moviesA[0].img} alt={moviesA[0].title} />
+                    {moviesA.map(movie => {
+                     return(   <div className="row movieDiv">
+                            <div className="col col-md-4 movieImg">
+                            <img src={movie.img} alt={movie.title} />
                     </div>
                     <div className="col col-md-4 movieD directorTime">
-                         <p>Titel: <h3> {moviesA[0].title}</h3></p>
+                         <p>Titel: <h3> {movie.title}</h3></p>
                         <h6>Director:</h6>
                         <span>
-                            {moviesA[0].director}
+                            {movie.director}
                         </span>
                         <h6>Time:</h6>
                         <span>
-                            {moviesA[0].time}
+                            {movie.time}
                         </span>
                     </div>
                     <div className="col col-md-4 movieD actorsL">
                         <h3>Actors:</h3>
                         <ul className="actors">
-                            <li>{moviesA[0].actors[0]}</li>
-                            <li>{moviesA[0].actors[1]}</li>
-                            <li>{moviesA[0].actors[2]}</li>
-                            <li>{moviesA[0].actors[3]}</li>
+                            <li>{movie.actors[0]}</li>
+                            <li>{movie.actors[1]}</li>
+                            <li>{movie.actors[2]}</li>
+                            <li>{movie.actors[3]}</li>
                         </ul>
                     </div>
                 </div>
-                <div className="row movieDiv">
-                    <div className="col col-md-4 movieImg">
-                        <img src={moviesA[1].img} alt={moviesA[1].title} />
-                    </div>
-                  <div className="col movieD col-md-4 directorTime">
-                    <p>Titel: <h3> {moviesA[1].title}</h3></p>
-                        <h6>Director:</h6>
-                        <span>
-                            {moviesA[1].director}
-                        </span>
-                        <h6>Time:</h6>
-                        <span>
-                            {moviesA[1].time}
-                        </span>
-                    </div>
-                    <div className="col col-md-4 movieD actorsL">
-                        <h3>Actors:</h3>
-                        <ul className="actors">
-                            <li>{moviesA[1].actors[0]}</li>
-                            <li>{moviesA[1].actors[1]}</li>
-                            <li>{moviesA[1].actors[2]}</li>
-                            <li>{moviesA[1].actors[3]}</li>
-                        </ul>
-                    </div>
-                </div>
+                    )})}
+                    
             </div>
         </div>
     );

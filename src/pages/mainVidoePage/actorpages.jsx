@@ -17,29 +17,40 @@ function ActorsPages() {
     const [selectedItem, setSelectedItem] = React.useState("")
     const [filterdActors, setFilterdActors] = React.useState(actors)
 
-    function serchActorsfunc(serchVal){
-        console.log(serchVal)
-        const serchActorsArr = actors.filter((actor) =>{
-            console.log(actor.fname.toLowerCase().startsWith({serchVal}) || actor.lname.toLowerCase().startsWith({serchVal}))
-            return actor.fname.toLowerCase().startsWith({serchVal}) || actor.lname.toLowerCase().startsWith({serchVal})})
-            console.log(serchActorsArr)
-            if(serchActorsArr.length>0){
+    function serchActorsfunc() {
+        console.log(serch)
+        const serchActorsArr = [];
+        if (serch) {
+            for (let actor of actors) {
+                console.log(actor)
+                console.log(serchActorsArr)
+                let fname = actor.fname.toLowerCase();
+                let lname = actor.lname.toLowerCase();
+                console.log(fname, lname)
+                if(fname.startsWith({ serch }) || lname.startsWith({ serch })){
+                  serchActorsArr.push(actor)
+                }
+            }
+
+            if (serchActorsArr.length > 0) {
                 setActors(serchActorsArr)
             }
+        }
+
     }
 
     return (
         <div>
             <header className="header">
-                <SerchComp   serchValue={serch} setSerchValue={setSerch} onSerchCange={serchActorsfunc}/>
-                
-                <FilterComp actorsL={filterdActors} onFilter={setFilterdActors} selected={selectedItem}  setSelected={setSelectedItem}/>
+                <SerchComp serchValue={serch} setSerchValue={setSerch} onSerchCange={serchActorsfunc} />
+
+                <FilterComp onFilter={setFilterdActors} selected={selectedItem} setSelected={setSelectedItem} />
             </header>
             <div className="container">
                 <div className="row">
-                    {actors.map(actor => 
+                    {actors.map(actor =>
                         <div className="col-md-3 col-sm-4 col-lg-2">
-                        <CardComp actor={actor}/>
+                            <CardComp actor={actor} />
                         </div>
                     )}
                 </div>
